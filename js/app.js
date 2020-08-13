@@ -4,9 +4,9 @@ const app = new Vue({
     data(){
         return{
             contact: {
-                name: 'Gerardo Lucero',
-                email: 'gera_conecta@hotmail.com',
-                message: 'Hola Mundo',
+                name: '',
+                email: '',
+                message: '',
                 optionSelect: 'Corea',
             },
             countries: ['Mexico', 'EU', 'Corea', 'China', 'Japon', 'Taiwan'],
@@ -21,6 +21,12 @@ const app = new Vue({
             axios.post(URL, this.contact).then(response => {
                 if (response.status == 200) {
                     this.send = true
+                    this.contact = {
+                        name: '',
+                        email: '',
+                        message: '',
+                        optionSelect: 'Corea',
+                    }
                 }
             }).catch(error => {
                 console.log(error)

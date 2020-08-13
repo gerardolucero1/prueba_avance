@@ -1,0 +1,29 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-weight: 600;
+}
+
+form{
+    border: 1px solid #CED0D4;
+    background-color: #F0F2F5;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form input, textarea, select{
+    border-radius: 0 !important;
+    border: none !important;
+    font-size: 14px !important;
+}
+
+form input:focus{
+    outline: none !important;
+}
+
+button{
+    border-radius: 0 !important;
+    border: none !important;
+}
