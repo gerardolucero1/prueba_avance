@@ -2,13 +2,13 @@
 
 $data = json_decode(file_get_contents("php://input"));
 
-$con = mysqli_connect('192.168.64.2', 'admin', 'pass');
+$con = mysqli_connect('u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 'oubtrstw4n7cjpaw', 'g6ijs2qd6pnuq9yn');
 
 if (!$con) {
     echo 'No se pudo conectar al servidor';
 }
 
-if (!mysqli_select_db($con, 'avance')) {
+if (!mysqli_select_db($con, 'xmm24uajp4vovyjm')) {
     echo 'Error al conectar a la BD';
 }
 
