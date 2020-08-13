@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test avance",
+  "main": "app.js",
+  "scripts": {
+    "test": "serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vuelidate": "^0.7.5"
+  }
+}

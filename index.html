@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/app.css">
+
+    <title>Contacto</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex justify-items-center align-items-center text-justify">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat voluptas iste, neque fugiat architecto, amet tempore repellat ab officia odio nisi sapiente suscipit tempora earum ducimus tenetur dolore ipsam rem.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6" v-if="!send">
+                    <form @submit.prevent="sendForm">
+                        <div class="form-group">
+                            <label for="email">Nombre</label>
+                            <input type="text" required class="form-control" v-model="contact.name" id="name">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" required class="form-control" v-model="contact.email" id="email">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea name="message" required class="form-control" id="message" v-model="contact.message" cols="30" rows="10"></textarea>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="option">Pais</label>
+                            <select name="option" required v-model="contact.optionSelect" id="option" class="form-control">
+                                <option v-for="(item, index) in countries" :key="index" :value="item">{{ item }}</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div v-else class="col-12 col-md-6 text-center">
+                    <h2>Mensaje enviado</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" integrity="sha512-QJsj3afWlCpnQ60XzzYE8Jb3IgHIK1BcGZox9rUSmRRq3Ocz9vQ1yR80eX2/b9jfx/UuT5zYWNdrM8Te/eCMhQ==" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
