@@ -18,7 +18,7 @@ if (!mysqli_query($con, $sql)) {
     echo 'Ocurrio un error';
 }else{
 
-    $emailToSend = 'yosoyelpapa@gmail.com';
+    $emailToSend = 'mercadotecnia@avanceytec.com.mx';
     
     function validarCampo($campo)
     {
@@ -38,11 +38,11 @@ if (!mysqli_query($con, $sql)) {
         $subject = "Assessment realizado";
 
 
-        // Enviar Email a The Garrison Hotel
+        //
         $headers  = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type:text/html;charset=\"UTF-8\"\r\n";
-        $headers .= "From: noreply@example.com\r\n";
-        $headers .= "Cc: gera_conecta@hotmail.com, gerardo.lucero.glez@hotmail.com\r\n";
+        $headers .= "From: noreply@prueba.com\r\n";
+        $headers .= "Cc: dochoa@avanceytec.com.mx, programador3@maplasa.com\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion();
         $message1  = "
             <html>
@@ -53,12 +53,13 @@ if (!mysqli_query($con, $sql)) {
             <p><b>Nombre:</b><br/>$data->name</p>
             <p><b>Email:</b><br/>$data->email</p>
             <p><b>Mensaje:</b><br/>$data->message</p>
+            <p><b>Pais:</b><br/>$data->optionSelect</p>
             </font>
             </body>
             </html>
             ";
 
-        // Enviar Email a destino
+        //
         mail($destinoMail, $subject, $message1, $headers);
 
         echo "1";
